@@ -27,7 +27,6 @@ class FormDemo extends Component {
                     onChange={this.onChange}
                     onSubmit={this.onSubmit}
                     elements={this.state.form}
-                    formIsValid={true}
                 />
             </div>
         );

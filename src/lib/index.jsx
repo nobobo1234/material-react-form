@@ -7,9 +7,16 @@ import MomentUtils from "material-ui-pickers/utils/moment-utils";
 import Button from "./UI/Button/Button";
 import IconButton from "./UI/Button/IconButton";
 import Input from "./UI/Input/Input";
-import Spinner from "./UI/Spinner/Spinner";
 import { Send } from "@material-ui/icons";
 
+/**
+ * Component that generates the form, self-closing
+ *
+ * Example:
+ * ```jsx
+ * <Form elements={this.state.form} onChange={this.onChange} onSubmit={this.onSubmit} />
+ * ```
+ */
 class Form extends Component {
     state = {
         formIsValid: false
@@ -75,7 +82,7 @@ Form.propTypes = {
     onSubmit: propTypes.func.isRequired,
     /** Function that is called when an input in the form changes */
     onChange: propTypes.func.isRequired,
-    formIsValid: propTypes.bool,
+    /** Array of elements that is used by the Component to render the form */
     elements: propTypes.arrayOf(
         propTypes.shape({
             formType: propTypes.oneOf("input", "select", "multiLine", "timePicker", "datePicker")
@@ -93,9 +100,17 @@ Form.propTypes = {
             show: propTypes.bool
         })
     ).isRequired,
+    /** Style to be applied to the form Component */
     style: propTypes.object
 };
 
-export { Button, Input, IconButton, Spinner, replaceInArray, formElementHelper, checkValidity };
+Form.defaultProps = {
+    style: {
+        width: 300,
+        margin: 5
+    }
+};
+
+export { Button, Input, IconButton, replaceInArray, formElementHelper, checkValidity };
 
 export default Form;
