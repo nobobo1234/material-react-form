@@ -5,7 +5,6 @@ import { replaceInArray, checkValidity, formElementHelper } from "./helpers";
 import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider";
 import MomentUtils from "material-ui-pickers/utils/moment-utils";
 import Button from "./UI/Button/Button";
-import IconButton from "./UI/Button/IconButton";
 import Input from "./UI/Input/Input";
 import { Send } from "@material-ui/icons";
 
@@ -111,6 +110,6 @@ Form.defaultProps = {
     }
 };
 
-export { Button, Input, IconButton, replaceInArray, formElementHelper, checkValidity };
+export { Button, Input, replaceInArray, formElementHelper, checkValidity };
 
 export default Form;

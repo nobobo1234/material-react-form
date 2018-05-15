@@ -23,6 +23,11 @@ class FormDemo extends Component {
         return (
             <div style={{ textAlign: "center" }}>
                 <h1>Demo Form</h1>
+                <p>
+                    <a href="https://github.com/nobobo1234/material-react-form/blob/master/src/docs/index.jsx">
+                        Link to source code
+                    </a>
+                </p>
                 <Form
                     onChange={this.onChange}
                     onSubmit={this.onSubmit}
