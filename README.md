@@ -47,6 +47,7 @@ const formElement = formElementHelper({
 Next to those 'required' props, you can pass on extra props that will be passed to the component that belongs
 to the `formType` you passed on. The current version supports 5 formTypes: `input`, `select`, `multiLine`,
 `timePicker`, and `datePicker`. Please note that the `timePicker` and `datePicker` form types need default values.
+The select propType accepts an options property that contains an array with all the to be shown options
 
 The validation object supports the following 5 properties: `required`, `minLength`, `maxLength`, `isEmail`, and `isNumeric`.
 
