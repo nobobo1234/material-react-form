@@ -1,3 +1,4 @@
 docs;
-src.babelrc;
+src;
+.babelrc;
 webpack.config.js;

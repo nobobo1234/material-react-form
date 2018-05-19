@@ -74,19 +74,17 @@ Input.propTypes = {
     /** Boolean that says whether the Input is valid */
     valid: propTypes.bool,
     /** Object that gets all the validation */
-    validation: propTypes.objectOf(
-        propTypes.shape({
-            required: propTypes.bool,
-            minLength: propTypes.number,
-            maxLength: propTypes.number,
-            isEmail: propTypes.bool,
-            isNumeric: propTypes.bool
-        })
-    ),
+    validation: propTypes.shape({
+        required: propTypes.bool,
+        minLength: propTypes.number,
+        maxLength: propTypes.number,
+        isEmail: propTypes.bool,
+        isNumeric: propTypes.bool
+    }),
     /** Boolean that says whether the Input Component is already touched or not */
     touched: propTypes.bool,
     /** The type of the Input Component */
-    formType: propTypes.oneOf("input", "select", "multiLine", "timePicker", "datePicker")
+    formType: propTypes.oneOf(["input", "select", "multiLine", "timePicker", "datePicker"])
         .isRequired,
     /** Boolean that says whether the Input Component should be shown */
     show: propTypes.bool

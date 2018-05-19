@@ -90,18 +90,19 @@ Form.propTypes = {
     /** Array of elements that is used by the Component to render the form */
     elements: propTypes.arrayOf(
         propTypes.shape({
-            formType: propTypes.oneOf(["input", "select", "multiLine", "timePicker", "datePicker"])
-                .required,
-            value: propTypes.oneOfType([propTypes.string, propTypes.instanceOf(Date)]),
-            validation: propTypes.objectOf(
-                propTypes.shape({
-                    required: propTypes.bool,
-                    isEmail: propTypes.bool,
-                    minLength: propTypes.number,
-                    maxLength: propTypes.number,
-                    isNumeric: propTypes.bool
-                })
-            ),
+            formType: propTypes.oneOf(["input", "select", "multiLine", "timePicker", "datePicker"]),
+            value: propTypes.oneOfType([
+                propTypes.string,
+                propTypes.instanceOf(Date),
+                propTypes.number
+            ]),
+            validation: propTypes.shape({
+                required: propTypes.bool,
+                isEmail: propTypes.bool,
+                minLength: propTypes.number,
+                maxLength: propTypes.number,
+                isNumeric: propTypes.bool
+            }),
             show: propTypes.bool
         })
     ).isRequired,
