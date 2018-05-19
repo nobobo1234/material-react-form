@@ -37,7 +37,7 @@ The helper function can be used like this:
 import { formElementHelper } from "material-react-form";
 
 const formElement = formElementHelper({
-    name: "myinput",
+    name: "myInputName",
     label: "My Input",
     formType: "input",
     validation: { required: true }
@@ -58,6 +58,44 @@ _If you want more formTypes or validation options please make an issue or make a
 This function is called when any of the input values changed. This function directly gives you the updated formArray
 with all the updated values and validation as the first value, the second value is the event that was given to the
 original onChange function. You also directly get the inputIdentifier (your element.name)
+
+##### getElementByName(array, elName)
+
+This is a helper function that you can use to easily get an item out of your array of formElements.
+
+_Example:_
+
+```jsx
+import { getElementByName } from "material-react-form";
+
+const element = getElementByName(myFormElements, "myInputName");
+```
+
+##### changeShow(array, whatToShow, show)
+
+This is a helper function that you can use to easily change the show property of an element in your form.
+The second argument is able to receive a string and an array.
+
+_Example:_
+
+```jsx
+import { changeShow } from "material-react-form";
+
+const updatedFormElements = changeShow(myFormElements, "myInputName", false);
+```
+
+##### replaceInArray(array, name, newValues)
+
+This helper function immutably changes one specific item in the array and then returns the new array.
+
+_Example:_
+`
+
+```jsx
+import { replaceInArray } from "material-react-form";
+
+const updatedFormElements = replaceInArray(myFormElements, "myInputName", { value: "Hello..." });
+```
 
 ---
 
