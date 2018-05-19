@@ -1,4 +1,4 @@
-docs;
-src;
-.babelrc;
-webpack.config.js;
+docs
+src
+.babelrc
+webpack.config.js
