@@ -16,6 +16,25 @@ export const formElementHelper = ({
     };
 };
 
+export const getElementByName = (array, elName) => {
+    return array.find(el => el.name === elName);
+};
+
+export const changeShow = (array, whatToShow, show) => {
+    if (typeof whatToShow === "string") whatToShow = [whatToShow];
+    return array.map(item => {
+        if (whatToShow.includes(item.name)) {
+            return {
+                ...array.find(
+                    item => item.name === whatToShow.find(arrayItem => item.name === arrayItem)
+                ),
+                show
+            };
+        }
+        return item;
+    });
+};
+
 export const replaceInArray = (array, name, newValues) => {
     return array.map(item => {
         if (item.name === name) {

@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
-import { replaceInArray, checkValidity, formElementHelper } from "./helpers";
+import {
+    replaceInArray,
+    checkValidity,
+    formElementHelper,
+    changeShow,
+    getElementByName
+} from "./helpers";
 
 import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider";
 import MomentUtils from "material-ui-pickers/utils/moment-utils";
@@ -110,6 +116,14 @@ Form.defaultProps = {
     }
 };
 
-export { Button, Input, replaceInArray, formElementHelper, checkValidity };
+export {
+    Button,
+    Input,
+    replaceInArray,
+    formElementHelper,
+    checkValidity,
+    changeShow,
+    getElementByName
+};
 
 export default Form;
