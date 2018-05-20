@@ -90,7 +90,14 @@ Form.propTypes = {
     /** Array of elements that is used by the Component to render the form */
     elements: propTypes.arrayOf(
         propTypes.shape({
-            formType: propTypes.oneOf(["input", "select", "multiLine", "timePicker", "datePicker"]),
+            formType: propTypes.oneOf([
+                "input",
+                "select",
+                "multiLine",
+                "timePicker",
+                "datePicker",
+                "colorPicker"
+            ]),
             value: propTypes.oneOfType([
                 propTypes.string,
                 propTypes.instanceOf(Date),

@@ -88,8 +88,14 @@ Input.propTypes = {
     /** Boolean that says whether the Input Component is already touched or not */
     touched: propTypes.bool,
     /** The type of the Input Component */
-    formType: propTypes.oneOf(["input", "select", "multiLine", "timePicker", "datePicker"])
-        .isRequired,
+    formType: propTypes.oneOf([
+        "input",
+        "select",
+        "multiLine",
+        "timePicker",
+        "datePicker",
+        "colorPicker"
+    ]).isRequired,
     /** Boolean that says whether the Input Component should be shown */
     show: propTypes.bool
 };
