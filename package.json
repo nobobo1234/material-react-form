@@ -1,6 +1,6 @@
 {
     "name": "material-react-form",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "A form generator for React that uses Material UI Next components",
     "main": "lib/index.js",
     "scripts": {

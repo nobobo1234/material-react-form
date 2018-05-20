@@ -46,7 +46,7 @@ class Form extends Component {
 
         this.setState({ formIsValid });
 
-        onChange(updatedAddForm, event);
+        onChange(updatedAddForm, name, event);
     };
 
     render() {

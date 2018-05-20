@@ -53,11 +53,20 @@ The validation object supports the following 5 properties: `required`, `minLengt
 
 _If you want more formTypes or validation options please make an issue or make a PR on my github_.
 
-##### onChange = inputIdentifier => (updatedForm, event) => { }
+##### onChange(updatedForm, name, event)
 
 This function is called when any of the input values changed. This function directly gives you the updated formArray
-with all the updated values and validation as the first value, the second value is the event that was given to the
+with all the updated values and validation as the first value, the second argument is the
+name of the formElement that changed, the third argument is the event that was given to the
 original onChange function. You also directly get the inputIdentifier (your element.name)
+The smallest possible onChange function would be: 
+
+```jsx
+onChange = updatedForm => {
+    this.setState({ myFormElements: updatedForm });
+}
+```
+
 
 ##### getElementByName(array, elName)
 
