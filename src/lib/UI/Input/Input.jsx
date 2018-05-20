@@ -4,6 +4,7 @@ import propTypes from "prop-types";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
 import { TimePicker, DatePicker } from "material-ui-pickers";
+import ColorPicker from "../../ColorPicker/ColorPicker";
 
 /**
  * Component that is used to render all of the forms types.
@@ -59,6 +60,9 @@ class Input extends Component {
                 inputElement = (
                     <DatePicker showTodayButton animateYearScrolling={false} {...extraProps} />
                 );
+                break;
+            case "colorPicker":
+                inputElement = <ColorPicker {...extraProps} />;
                 break;
             default:
                 inputElement = <TextField />;

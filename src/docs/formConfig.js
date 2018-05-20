@@ -46,5 +46,11 @@ export default [
         value: Date.now(),
         formType: "datePicker",
         validation: { required: true }
+    }),
+    formElementHelper({
+        name: "input6",
+        label: "Color Picker",
+        formType: "colorPicker",
+        validation: { required: true }
     })
 ];

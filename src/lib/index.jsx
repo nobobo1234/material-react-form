@@ -106,7 +106,7 @@ Form.propTypes = {
             show: propTypes.bool
         })
     ).isRequired,
-    /** Style to be applied to the form Component */
+    /** Style to be applied to the Input Component */
     style: propTypes.object
 };
 

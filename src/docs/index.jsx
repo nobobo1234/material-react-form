@@ -21,7 +21,13 @@ class FormDemo extends Component {
 
     render() {
         return (
-            <div style={{ textAlign: "center" }}>
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
                 <h1>Demo Form</h1>
                 <p>
                     <a href="https://github.com/nobobo1234/material-react-form/blob/master/src/docs/index.jsx">
