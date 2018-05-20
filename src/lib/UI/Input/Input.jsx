@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
 
-import { TextField, MenuItem } from "@material-ui/core";
+import MenuItem from "@material-ui/core/MenuItem";
+import TextField from "@material-ui/core/TextField";
 import { TimePicker, DatePicker } from "material-ui-pickers";
 
 /**
