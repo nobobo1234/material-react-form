@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
-import momentPropTypes from "react-moment-proptypes";
+import moment from "moment";
 import {
     replaceInArray,
     checkValidity,
@@ -103,7 +103,12 @@ Form.propTypes = {
                 propTypes.string,
                 propTypes.instanceOf(Date),
                 propTypes.number,
-                momentPropTypes.momentObj
+                (props, propName, componentName) => {
+                    if (moment.isMoment(props[propName]))
+                        return new Error(
+                            `Invalid prop ${propName} supplied to ${componentName}. Validation failed`
+                        );
+                }
             ]),
             validation: propTypes.shape({
                 required: propTypes.bool,
