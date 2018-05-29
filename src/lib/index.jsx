@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
+import momentPropTypes from "react-moment-proptypes";
 import {
     replaceInArray,
     checkValidity,
@@ -101,7 +102,8 @@ Form.propTypes = {
             value: propTypes.oneOfType([
                 propTypes.string,
                 propTypes.instanceOf(Date),
-                propTypes.number
+                propTypes.number,
+                momentPropTypes.momentObj
             ]),
             validation: propTypes.shape({
                 required: propTypes.bool,

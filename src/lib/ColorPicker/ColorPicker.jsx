@@ -58,7 +58,7 @@ class ColorPicker extends Component {
 
     render() {
         const { show } = this.state;
-        const { classes, value, onChange, ...other } = this.props;
+        const { classes, value, ...other } = this.props;
 
         return (
             <div>
