@@ -104,7 +104,7 @@ Form.propTypes = {
                 propTypes.instanceOf(Date),
                 propTypes.number,
                 (props, propName, componentName) => {
-                    if (moment.isMoment(props[propName]))
+                    if (!moment.isMoment(props[propName]))
                         return new Error(
                             `Invalid prop ${propName} supplied to ${componentName}. Validation failed`
                         );
