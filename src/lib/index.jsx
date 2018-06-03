@@ -55,7 +55,7 @@ class Form extends Component {
         const { formIsValid } = this.state;
 
         return (
-            <MuiPickersUtilsProvider utils={MomentUtils}>
+            <MuiPickersUtilsProvider utils={MomentUtils} moment={moment}>
                 <form onSubmit={onSubmit}>
                     {elements.map(element => (
                         <Input
