@@ -1,6 +1,6 @@
 {
     "name": "material-react-form",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "description": "A form generator for React that uses Material UI Next components",
     "main": "lib/index.js",
     "scripts": {
@@ -47,6 +47,7 @@
         "@material-ui/icons": "^1.0.0-beta.43",
         "date-fns": "^1.29.0",
         "material-ui-pickers": "^1.0.0-rc.9",
+        "moment": "^2.22.2",
         "prop-types": "^15.6.1",
         "react-color": "^2.14.1",
         "react-router-dom": "^4.2.2"

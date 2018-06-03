@@ -7,9 +7,10 @@ import {
     changeShow,
     getElementByName
 } from "./helpers";
+import moment from "moment";
 
 import MuiPickersUtilsProvider from "material-ui-pickers/utils/MuiPickersUtilsProvider";
-import DateFnsUtils from "material-ui-pickers/utils/date-fns-utils";
+import MomentUtils from "material-ui-pickers/utils/moment-utils";
 import Button from "./UI/Button/Button";
 import Input from "./UI/Input/Input";
 import { Send } from "@material-ui/icons";
@@ -54,7 +55,7 @@ class Form extends Component {
         const { formIsValid } = this.state;
 
         return (
-            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <MuiPickersUtilsProvider utils={MomentUtils} moment={moment}>
                 <form onSubmit={onSubmit}>
                     {elements.map(element => (
                         <Input
@@ -103,7 +104,6 @@ Form.propTypes = {
                 propTypes.instanceOf(Date),
                 propTypes.number,
                 (props, propName, componentName) => {
-                    console.log(propName);
                     if (!moment.isMoment(props[propName]))
                         return new Error(
                             `Invalid prop ${propName} supplied to ${componentName}. Validation failed`
